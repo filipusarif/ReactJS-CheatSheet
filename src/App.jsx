@@ -1,21 +1,9 @@
+import LoginPage from './components/Pages/registerPage'
 
-// Arrow function Component
-const Button = (props) => {
-  // Default Value, destruction properties
-  const {children="...", color} = props;
 
-  return <>
-    <button className={`px-7 py-3 rounded-md ${color} text-slate-200`}>
-      {children}
-    </button>
-  </>;
-};
 
 export default function index(){
   return (
-  <section className="bg-blue-500 h-screen w-screen flex items-center justify-center gap-2">
-    <Button color="bg-red-500">login</Button>
-    <Button color="bg-green-500">Signin</Button>
-    <Button color="bg-purple-500"></Button>
-  </section>)
+    <LoginPage />
+  )
 }

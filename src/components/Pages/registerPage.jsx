@@ -7,7 +7,8 @@ const index = () => {
         <Form title="Register"
         question="Have an Account?" 
         to="Login" 
-        url="/Login">
+        url="/Login"
+        type="register" >
             <FormRegister></FormRegister>
         </Form>
     </section>)

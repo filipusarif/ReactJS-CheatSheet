@@ -6,7 +6,8 @@ const index = () => {
         <Form title="Login" 
         question="Don't Have an Account?" 
         to="Register" 
-        url="/Register">
+        url="/Register"
+        type="login">
             <FormOrganism></FormOrganism>
         </Form>
     </section>)

@@ -2,7 +2,17 @@ import FormMolecules from '../../Molecules/Form'
 import ButtonForm from '../../Atoms/FormButton'
 
 const index = (props) => {
-    return <form action="" className="mt-2 flex flex-col gap-3 justify-center">
+    const loginHandler = (event) => {
+        event.preventDefault();
+        localStorage.setItem('username',event.target.username.value);
+        localStorage.setItem('email',event.target.email.value);
+        localStorage.setItem('password',event.target.password.value);
+        window.location = '/products'
+    }
+
+    return <form
+        className="mt-2 flex flex-col gap-3 justify-center"
+        onSubmit={loginHandler}>
         <FormMolecules 
         id="usernameId" 
         name="username"
@@ -21,7 +31,7 @@ const index = (props) => {
         type="password">
             Password
         </FormMolecules>
-        <ButtonForm>Send</ButtonForm>
+        <ButtonForm type="submit">Send</ButtonForm>
     </form>
 }
 
